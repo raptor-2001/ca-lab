@@ -1,5 +1,7 @@
 # ca-lab
 
+#### Repo also has the theory of all assignments.
+ 
 # Important instructions to download and install the dependencies
 
 1. Clone or Download the repo in Pictures/Downloads of the System
@@ -56,4 +58,6 @@
 
 # Recording of the Session
 https://drive.google.com/drive/folders/1TX4FeJWERElpqUjCJRUmwS-xie5N2g-L
+
+
 
