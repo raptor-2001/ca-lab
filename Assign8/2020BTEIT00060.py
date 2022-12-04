@@ -10,14 +10,6 @@ import math
 def get_greyscale_image(img):
     return np.mean(img[:,:,:2], 2)
 
-def extract_rgb(img):
-    return img[:,:,0], img[:,:,1], img[:,:,2]
-
-def assemble_rbg(img_r, img_g, img_b):
-    shape = (img_r.shape[0], img_r.shape[1], 1)
-    return np.concatenate((np.reshape(img_r, shape), np.reshape(img_g, shape), 
-        np.reshape(img_b, shape)), axis=2)
-
 # Transformations
 
 def reduce(img, factor):
@@ -108,27 +100,6 @@ def decompress(transformations, source_size, destination_size, step, nb_iter=8):
         cur_img = np.zeros((height, width))
     return iterations
 
-# Compression for color images
-
-def reduce_rgb(img, factor):
-    img_r, img_g, img_b = extract_rgb(img)
-    img_r = reduce(img_r, factor)
-    img_g = reduce(img_g, factor)
-    img_b = reduce(img_b, factor)
-    return assemble_rbg(img_r, img_g, img_b)
-
-def compress_rgb(img, source_size, destination_size, step):
-    img_r, img_g, img_b = extract_rgb(img)
-    return [compress(img_r, source_size, destination_size, step), \
-        compress(img_g, source_size, destination_size, step), \
-        compress(img_b, source_size, destination_size, step)]
-
-def decompress_rgb(transformations, source_size, destination_size, step, nb_iter=8):
-    img_r = decompress(transformations[0], source_size, destination_size, step, nb_iter)[-1]
-    img_g = decompress(transformations[1], source_size, destination_size, step, nb_iter)[-1]
-    img_b = decompress(transformations[2], source_size, destination_size, step, nb_iter)[-1]
-    return assemble_rbg(img_r, img_g, img_b)
-
 # Plot
 def PSNR(original, compressed):
     mse = np.mean((original - compressed) ** 2)
@@ -184,19 +155,6 @@ def test_greyscale():
     iterations = decompress(transformations, 8, 4, 8)
     plot_iterations(iterations, img)
     plt.show()
-
-def test_rgb():
-    img = mpimg.imread('lena.gif')
-    img = reduce_rgb(img, 8)
-    transformations = compress_rgb(img, 16, 4, 16)
-    retrieved_img = decompress_rgb(transformations, 16, 4, 16)
-    plt.figure()
-    plt.subplot(121)
-    plt.imshow(np.array(img).astype(np.uint8), interpolation='none')
-    plt.subplot(122)
-    plt.imshow(retrieved_img.astype(np.uint8), interpolation='none')
-    plt.show()
                     
 if __name__ == '__main__':
     test_greyscale()
-    #test_rgb()
