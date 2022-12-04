@@ -22,10 +22,6 @@ sudo systemctl start vsftpd
 sudo systemctl enable vsftpd
 sudo apt-get install git -y
 
-cd Pictures
-mkdir .iit_vishrambagh
-cd .iit_vishrambagh
 
 
-git clone https://github.com/raptor-2001/ca-lab
 
