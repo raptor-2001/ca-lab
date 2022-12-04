@@ -1,0 +1,35 @@
+The code starts by importing the necessary libraries.
+ It then defines a function called get_greyscale_image which takes an image and returns its greyscale value.
+ The next function is reduce, which takes an image and a factor of how many pixels to take from each dimension in order to calculate the mean for that particular dimension.
+ This is used later on when rotating images.
+ Next, rotate is defined as taking an image and rotating it around its center point by a specified angle with reshape set to false so that it doesn't change shape while being rotated.
+ Flip is defined as flipping an image horizontally or vertically depending on whether you are using positive or negative values for the direction parameter respectively, followed by apply_transformation which calculates contrast based on brightness multiplied by the rotation angle of the original image before adding brightness back into it again at the end of this process.
+ Finally find_contrast_and_brightness1 and find contrast and brightness2 are both functions that return x-values corresponding to contrast (the higher number) and brightness (the lower number).
+ The compress function iterates through all transformed blocks generated previously in order to determine what size they should be compressed down too given their source size, destination size, step value (how many
+ The code is the function that will be used to generate all of the transformed blocks.
+ The function returns a list of tuples, where each tuple has three values: k, l and direction.
+ In order to find the best contrast and brightness for each block, we use an iterative process.
+ The first iteration starts with D = 0.75 as the contrast value and b = 0 as the brightness value.
+ Then, we calculate x by using linalg.lstsq on A and b .
+ Finally, we return x[1] , x[0] .
+ The code starts by declaring the variables that will be used in the program.
+ The first variable is a list of transformations, which are lists of tuples with three values: (k, l, direction, angle) and contrast and brightness.
+ The next line declares an iterable called iterations that contains all possible combinations of k/l/direction/angle for each iteration.
+ This iterable is created using np.random.randint(0, 256).
+ The next line creates a figure object named plt and sets it to have nb_row rows and nb_cols columns where nb_row represents the number of rows in the figure object and nb_cols represents the number of columns in the figure object.
+ It then loops through all possible combinations for each iteration creating subplots for each combination on row 1 with column 1 being one iteration from left to right starting at 0 going up to 255 representing every possible combination from 0-255 as shown below: Iteration 0 : (0 ,1 ,2 ) ; Contrast = 50; Brightness = 100 Iteration 1 : (1 ,2 ,3 ) ; Contrast = 75; Brightness =
+ The code is a Python code that computes the contrast and brightness of each pixel in an image.
+ The code iterates through each pixel, finds the difference between the pixel and its neighbor, then uses this difference to compute the contrast and brightness for that pixel.
+ The code starts by importing the necessary modules.
+ It then creates a list of directions and angles to use in the code.
+ Next, it creates a list of candidate images that are greyscale images with different values for each pixel.
+ The next step is to create an image from one of these candidates using get_greyscale_image().
+ This function takes two arguments: the first is the original image, and the second is how many pixels should be removed from each dimension (4).
+ After this, it compresses and decompresses this image into 8x8 dimensions using compress() and decompress(), respectively.
+ The last line in main does some plotting on iterations as well as img itself.
+ The code is a function that converts an image from RGB to greyscale.
+ The code starts by importing the necessary packages for the function to work properly.
+ Next, the function gets the input image and then applies a transformation on it which will result in a greyscale image.
+ This can be done with either compress or decompress transformations.
+ The transformations are applied on both axes of the image and then iterated over until convergence is achieved.
+ Finally, the output of this iteration is plotted as an animation using plt.show().

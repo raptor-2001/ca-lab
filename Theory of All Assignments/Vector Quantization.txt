@@ -1,0 +1,9 @@
+The code starts by importing the necessary libraries and creating a function to create an image.
+ The code then creates an image with dimensions of w x h x d, which is the size of the original image.
+ Next, it creates a label index for each pixel in the new image that corresponds to its position on the original image.
+ It then loops through all pixels in both images and stores their corresponding values in a list called varL.
+ Finally, it returns this newly created array as an output variable named "image".
+ The next line imports KMeans from sklearn library and uses it to fit six clusters into our data set using random initialization method (random_state=1).
+ After fitting our data set, we can use predict() function to find out what cluster each sample belongs to.
+ The code attempts to show the outcome of reducing an image by a factor of 255.
+ The code above has two parts: 1) The original image (bird.gif) and 2) A reduced image that is reduced by a factor of 255 (reduced_image).

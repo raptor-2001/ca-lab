@@ -1,0 +1,14 @@
+The code calculates the mean and standard deviation of a set of numbers.
+ The code calculates the sum, average, difference, and standard deviation for each number in an array.
+ The code uses a loop to iterate through all the numbers in an array.
+ The code computes the sum of the squares of each column and the mean.
+ The difference between these two values is then computed by subtracting one from the other.
+ Finally, a standard deviation is computed by squaring this difference and dividing it by 100.
+ The code above does not compute an MSE (Mean Squared Error) because it assumes that there are 99 observations in total, which would be true if we were to use a sample size of 1,000 or more.
+ The code starts by declaring a variable called "TOTALsum" and a variable called "TOTALmean".
+ The code then calculates the difference between these two variables.
+ This is done by subtracting the mean from each of the five sets of data.
+ The code then calculates the standard deviation for this set of data.
+ It does so by calculating the square root of (the difference divided by 99).
+ The code will calculate the total standard deviation of a given set of numbers, and then use that value to calculate the mean.
+ The code will calculate the total standard deviation of a given set of numbers, and then use that value to calculate the mean.

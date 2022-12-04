@@ -1,0 +1,29 @@
+The code starts by declaring a vector of vectors, lower and upper.
+ The size of the vector is set to row.
+ Then it loops through each element in the matrix arr, which is a vector of integers, and creates two new vectors: one for the lower triangular part of the matrix and one for the upper triangular part.
+ The code then iterates through each element in both matrices (upper[i][k] = arr[i][k] - sum; lower[i][k] = arr[i][k] + sum) until all elements have been processed.
+ The code is an example of a matrix decomposition algorithm.
+ It takes in a vector> array, arr and returns the lower triangular matrix luDecomposition(arr, v) and the upper triangular matrix uDecomposition(arr, v).
+ The first for loop iterates over each row of the input array arr.
+ The second for loop iterates over each column of the input array arr.
+ The third for loop iterates over each element in the input array arr.
+ The code starts by declaring the variables.
+ int lower[][] = new int[n]; // Declaring a 2D array of integers to store the lower triangular matrix.
+ int upper[][] = new int[n]; // Declaring a 2D array of integers to store the upper triangular matrix.
+ The code then sets up an if statement that will check for each row in A and B, and assign 1 or 0 depending on whether it is equal to k or not.
+ If it is not equal, then sum all elements in column j from A with element j from B (arr[k][j]).
+ This value will be stored in variable "sum".
+ Then divide this value by number of elements in column i from A (upper [i]) and multiply it by number of elements in column i from B (lower [i]).
+ The result will be assigned back into arr[] at position k. Finally, set lower[] at position k with this value divided by upper[] at position i:
+ The code will produce the following matrix: A = LU B = LUX
+ The code is a loop that iterates through the array arr.
+ It starts from the last row and goes to the first row.
+ For each iteration, it calculates the sum of all elements in lower[i] and upper[i].
+ Then it divides this sum by y[i], which is calculated using an equation.
+ The code then creates two vectors x and y, where x contains values for every element in upper[] while y contains values for every element in lower[]
+ The code does the following: 1.
+ It creates a vector of size arr.size() which is filled with 0's for all the elements in the array lower.
+ 2.
+ It iterates through each element in lower and calculates its sum using a nested loop, where it multiplies every element in row by y[j] and sums up the result to get sum.
+ 3.
+ The value of x[i] is calculated as follows: x[i] = float((y[i] - sum)/upper[i][i]);

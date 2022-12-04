@@ -1,0 +1,12 @@
+The code starts by importing the necessary libraries.
+ The cv2 library is used to import images, resize them, and show them on a computer screen.
+ The numpy library is used for matrix operations such as adding 1 to all values in an array.
+ Matplotlib is used for plotting graphs of data that has been imported from the image file kitchenGray .
+ The code starts by declaring variables that will be needed later in the program: H , which will store histograms of 256 different colors; s , which stores shape information about each pixel; x , which stores a single color value from the original image; y , which stores an empty list of 255 numbers representing pixels with no color assigned yet; equal , which holds another histogram created using the same process as before but with different starting points (the first point being 0); and cv2 .
+ This last variable is declared at the end because it's only needed when running this program.
+ Next, we create two functions called Hist() and equal() .
+ These are both helper functions that help us do some calculations related to creating histograms.
+ Then we use these functions to create our own histogram based off of our original image kitchenGray .
+ We then plot this new graph on top of
+ The code attempts to make a binary image of the original image, which has been resized and converted to grayscale.
+ The code then makes a histogram of the new image, before plotting it on top of the original image.

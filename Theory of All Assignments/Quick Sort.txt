@@ -1,0 +1,10 @@
+The code is a program that asks the user to enter how many numbers they want to enter.
+ The code then creates an array of integers and starts looping through each number in the array, adding it to another integer variable called j.
+ After this is done, the code quick sorts all of the numbers from 0-j into two arrays: arr[0] and arr[1].
+ Then it loops through these two arrays again, printing out each number on screen.
+ The first thing you should notice about this program is that there are three main functions: partition(), quickSort(), and main().
+ These three functions are used for different purposes but they all have one thing in common: They use variables called i and j which represent indexes or positions within an array.
+ In order to understand what's going on with these functions we need to look at their implementations more closely.
+ Partition() takes an int[] as input (arr) and divides it into two parts based on its index value (i).
+ It does so by creating a new int[] with just one element (pivot), dividing arr into l=l
+ The code attempts to sort an array of integers.
